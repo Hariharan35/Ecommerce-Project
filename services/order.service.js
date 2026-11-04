@@ -1,6 +1,6 @@
 const Order = require("../models/order.model");
 const Cart = require("../models/cart.model");
-// const Product = require("../models/product.model");
+const Product = require("../models/product.model");
 
 const fail = (message, statusCode = 400) => {
   const err = new Error(message);
