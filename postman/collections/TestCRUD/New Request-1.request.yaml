@@ -1,0 +1,18 @@
+$kind: http-request
+name: Signup
+description: ""
+url: 'http://localhost:2000/api/users/signup/'
+method: POST
+headers:
+  - key: Authorization
+    value: ''
+    disabled: true
+body:
+  type: json
+  content: |-
+    {
+      "name": "Arun Kumar",
+      "email": "arun@gmail.com",
+      "password": "Arun@123"
+    }
+order: 2000

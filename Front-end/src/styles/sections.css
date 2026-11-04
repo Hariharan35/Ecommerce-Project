@@ -1,0 +1,75 @@
+/* ---------- Shared section headings ---------- */
+.eyebrow { display: inline-block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.18em; color: var(--gold-dark); margin-bottom: 6px; }
+.eyebrow.light { color: var(--gold-light); }
+.home-section { margin: var(--s6) 0 var(--s5); }
+.section-head { margin-bottom: var(--s4); }
+.section-head h2 { font-size: 32px; font-weight: 600; }
+.listing-head-title { margin-top: var(--s6); }
+
+/* ---------- Hero ---------- */
+.hero { position: relative; overflow: hidden; border-radius: var(--radius-lg); margin-bottom: var(--s4); box-shadow: var(--shadow-md); }
+.hero-track { display: flex; transition: transform 0.7s cubic-bezier(0.65, 0, 0.35, 1); }
+.hero-slide { flex: 0 0 100%; min-height: 420px; display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: var(--s5); padding: 0 clamp(28px, 7vw, 96px); color: #fff; position: relative; overflow: hidden; }
+.hero-a { background: radial-gradient(circle at 80% 20%, #2b4a91 0%, transparent 55%), linear-gradient(120deg, #0f1b33, #16264a); }
+.hero-b { background: radial-gradient(circle at 80% 20%, #3a4a63 0%, transparent 55%), linear-gradient(120deg, #111a2b, #1d2b46); }
+.hero-c { background: radial-gradient(circle at 80% 20%, #6a2f5a 0%, transparent 55%), linear-gradient(120deg, #1a1530, #2a1d45); }
+.hero-d { background: radial-gradient(circle at 80% 20%, #8a6a22 0%, transparent 55%), linear-gradient(120deg, #1b1a14, #2b2616); }
+.hero-content { position: relative; z-index: 2; max-width: 560px; }
+.hero-content h2 { font-size: clamp(32px, 5vw, 58px); font-weight: 700; line-height: 1.08; margin-bottom: var(--s4); }
+.hero-content p { font-size: clamp(15px, 2vw, 19px); color: #d4dbeb; margin-bottom: var(--s5); max-width: 460px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: var(--s3); }
+.hero-art { position: relative; display: grid; place-items: center; color: var(--gold-light); }
+.hero-art svg { position: relative; z-index: 1; stroke-width: 1; filter: drop-shadow(0 12px 30px rgba(201, 162, 75, 0.35)); }
+.hero-ring { position: absolute; width: 320px; height: 320px; border-radius: 50%; border: 1px solid rgba(232, 203, 133, 0.35); box-shadow: inset 0 0 0 40px rgba(232, 203, 133, 0.05), 0 0 0 40px rgba(232, 203, 133, 0.03); }
+.hero-arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; border-radius: 50%; background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(6px); border: 1px solid rgba(255, 255, 255, 0.25); color: #fff; display: grid; place-items: center; z-index: 3; transition: background 0.2s, color 0.2s; }
+.hero-arrow:hover { background: var(--gold); color: var(--navy); }
+.hero-arrow.left { left: 16px; }
+.hero-arrow.right { right: 16px; }
+.hero-dots { position: absolute; bottom: 18px; left: 0; right: 0; display: flex; justify-content: center; gap: 8px; z-index: 3; }
+.hero-dots button { width: 8px; height: 8px; border-radius: 999px; background: rgba(255, 255, 255, 0.4); padding: 0; transition: width 0.3s, background 0.3s; }
+.hero-dots button.active { width: 28px; background: var(--gold); }
+
+/* ---------- Trust bar ---------- */
+.trustbar { display: grid; grid-template-columns: repeat(4, 1fr); background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow); margin-bottom: var(--s4); }
+.trust-item { display: flex; align-items: center; gap: var(--s3); padding: var(--s4) var(--s5); border-right: 1px solid var(--border); }
+.trust-item:last-child { border-right: 0; }
+.trust-icon { width: 46px; height: 46px; flex-shrink: 0; border-radius: 50%; display: grid; place-items: center; background: var(--navy); color: var(--gold-light); }
+.trust-item strong { display: block; font-size: 14px; }
+.trust-item p { font-size: 12px; color: var(--text-muted); }
+
+/* ---------- Category tiles ---------- */
+.tile-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s4); }
+.tile { position: relative; overflow: hidden; min-height: 220px; border-radius: var(--radius-lg); padding: var(--s5); color: #fff; display: flex; align-items: flex-end; transition: transform 0.3s, box-shadow 0.3s; }
+.tile:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.tile-a { background: linear-gradient(150deg, #16264a, #2b4a91); }
+.tile-b { background: linear-gradient(150deg, #1d2b46, #3b4d6b); }
+.tile-c { background: linear-gradient(150deg, #2a1d45, #6a2f5a); }
+.tile-d { background: linear-gradient(150deg, #2b2616, #8a6a22); }
+.tile-icon { position: absolute; top: 18px; right: 12px; color: var(--gold-light); opacity: 0.28; stroke-width: 1; transition: transform 0.4s, opacity 0.3s; }
+.tile:hover .tile-icon { transform: scale(1.12) rotate(-5deg); opacity: 0.45; }
+.tile-text { position: relative; }
+.tile-text h3 { font-family: var(--font-display); font-size: 24px; font-weight: 600; }
+.tile-text p { color: #d4dbeb; margin: 2px 0 12px; }
+.tile-cta { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-light); }
+
+/* ---------- Promo banner ---------- */
+.promo { display: flex; justify-content: space-between; align-items: center; gap: var(--s5); flex-wrap: wrap; margin-bottom: var(--s5); padding: var(--s6) clamp(24px, 5vw, 64px); border-radius: var(--radius-lg); color: #fff; background: radial-gradient(circle at 90% 50%, rgba(201, 162, 75, 0.35), transparent 50%), linear-gradient(120deg, #0f1b33, #22376a); box-shadow: var(--shadow-md); }
+.promo h2 { font-size: clamp(26px, 4vw, 40px); font-weight: 700; margin-bottom: 6px; }
+.promo p { color: #d4dbeb; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1000px) {
+  .tile-grid, .trustbar { grid-template-columns: repeat(2, 1fr); }
+  .trust-item:nth-child(2) { border-right: 0; }
+  .trust-item:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
+  .hero-slide { grid-template-columns: 1fr; min-height: 380px; padding-bottom: 40px; }
+  .hero-art { display: none; }
+}
+@media (max-width: 600px) {
+  .section-head h2 { font-size: 26px; }
+  .tile { min-height: 170px; padding: var(--s4); }
+  .tile-icon { width: 64px; height: 64px; }
+  .tile-text h3 { font-size: 19px; }
+  .hero-arrow { display: none; }
+  .promo { padding: var(--s5); }
+}

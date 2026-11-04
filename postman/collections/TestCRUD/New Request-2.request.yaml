@@ -1,0 +1,6 @@
+$kind: http-request
+name: New Request
+description: ""
+url: ""
+method: GET
+order: 3000
