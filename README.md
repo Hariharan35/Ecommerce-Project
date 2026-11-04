@@ -312,11 +312,9 @@ React page -> services/api.js -> Express route -> middleware (JWT, role)
 
 ## Known Issues and Next Steps
 
-1. **Cart and orders fail until this is fixed.** In `services/cart.service.js` and `services/order.service.js` the line `const Product = require("../models/product.model");` is commented out, which causes a `Product is not defined` error. Remove the `//` in both files.
-2. **Admin routes cannot be used.** In `models/user.model.js` the role enum is `["customer"]`. Add `"admin"` to the list, then promote a user in MongoDB (`db.users.updateOne({ email: "you@example.com" }, { $set: { role: "admin" } })`).
-3. **Frontend package name.** `Front-end/package.json` is still named `college-portal`; rename it to `myshop-frontend`.
-4. **Hard-coded URLs.** The API URL (`src/services/api.js`) and the CORS origin (`app.js`) are set to localhost. Move them to environment variables before deploying.
-5. **Placeholders.** Ratings and MRP prices are generated in `src/utils/format.js`; the wishlist is stored only in the browser; footer links, the newsletter form and "Save for later" do not do anything yet.
-6. **Secrets.** Rotate any credentials that were ever shared (database password, JWT secret, email app password).
+1. **Admin routes cannot be used.** In `models/user.model.js` the role enum is `["customer"]`. Add `"admin"` to the list, then promote a user in MongoDB (`db.users.updateOne({ email: "you@example.com" }, { $set: { role: "admin" } })`).
+2. **Hard-coded URLs.** The API URL (`src/services/api.js`) and the CORS origin (`app.js`) are set to localhost. Move them to environment variables before deploying.
+3. **Placeholders.** Ratings and MRP prices are generated in `src/utils/format.js`; the wishlist is stored only in the browser; footer links, the newsletter form and "Save for later" do not do anything yet.
+4. **Secrets.** Rotate any credentials that were ever shared (database password, JWT secret, email app password).
 
 Ideas for later: online payments, an admin dashboard, product reviews, image uploads, automated tests and deployment.
